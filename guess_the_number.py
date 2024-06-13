@@ -13,8 +13,9 @@ for guesses_taken in range(1, 7):
     print('Take a guess.')
     try:
         guess = int(input())
-    except ValueError, NameError:
+    except ValueError:
         print('Please input numbers only')
+        continue
         
     if guess < secret_number:
         print('Your guess is to low.')
